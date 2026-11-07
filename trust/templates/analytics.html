@@ -1,13 +1,11 @@
 {% extends "base.html" %}
 {% block title %}Analytics | RideMate{% endblock %}
-
 {% block content %}
 <section class="section" aria-labelledby="an-title">
   <header class="section__head">
     <p class="eyebrow">Staff only</p>
     <h1 class="display display--medium" id="an-title">Analytics</h1>
   </header>
-
   <dl class="tally__list tally__list--grid">
     <div class="tally__item"><dt>Users</dt><dd>{{ totals.users }}</dd></div>
     <div class="tally__item"><dt>Rides</dt><dd>{{ totals.rides }}</dd></div>
@@ -18,7 +16,6 @@
     <div class="tally__item"><dt>Women-only rides</dt><dd>{{ totals.women_only }}</dd></div>
     <div class="tally__item"><dt>Reviews</dt><dd>{{ totals.reviews }}</dd></div>
   </dl>
-
   <h2 class="section__title section__title--small">Rides by vehicle</h2>
   {% if by_vehicle %}
   <ul class="bars">
@@ -31,7 +28,6 @@
     {% endfor %}
   </ul>
   {% else %}<p class="muted">No rides yet.</p>{% endif %}
-
   <h2 class="section__title section__title--small">Top routes</h2>
   {% if top_routes %}
   <ol class="routes">
