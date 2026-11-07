@@ -1,13 +1,11 @@
 {% extends "base.html" %}
 {% block title %}Rate {{ target.display_name }} | RideMate{% endblock %}
-
 {% block content %}
 <section class="auth" aria-labelledby="review-title">
   <header class="auth__head">
     <p class="eyebrow">{{ ride }}</p>
     <h1 class="display display--medium" id="review-title">How was the ride with {{ target.display_name }}?</h1>
   </header>
-
   <form class="form" method="post" novalidate>
     {% csrf_token %}
     {% include "partials/form_errors.html" %}

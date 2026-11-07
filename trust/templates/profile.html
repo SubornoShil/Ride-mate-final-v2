@@ -1,19 +1,16 @@
 {% extends "base.html" %}
 {% block title %}Profile | RideMate{% endblock %}
-
 {% block content %}
 <section class="section" aria-labelledby="profile-title">
   <header class="section__head">
     <p class="eyebrow">{{ nav_profile.initials }}</p>
     <h1 class="display display--medium" id="profile-title">{{ nav_profile.display_name }}</h1>
   </header>
-
   <div class="trustmark">
     <p class="trustmark__score"><span data-count>{{ nav_profile.trust_score|floatformat:"1" }}</span></p>
     <p class="trustmark__label">{{ nav_profile.trust_label }} trust score</p>
     <p class="section__note">An average of the ratings you receive, scaled to 100. Ratings from accounts under a week old count half.</p>
   </div>
-
   <section class="block" aria-labelledby="guardians-title">
     <h2 class="section__title section__title--small" id="guardians-title">Guardian Mode</h2>
     <p class="section__note">When a seat is confirmed for you, each guardian gets an SMS with the route and departure time. Up to {{ guardian_limit }}.</p>
@@ -40,7 +37,6 @@
     </form>
     {% endif %}
   </section>
-
   <section class="block" aria-labelledby="my-circles-title">
     <h2 class="section__title section__title--small" id="my-circles-title">Circles</h2>
     {% if circles %}
@@ -49,7 +45,6 @@
     <p class="muted">You are not in a circle. <a href="{% url 'trust:circles' %}">Join one with a code</a>.</p>
     {% endif %}
   </section>
-
   <section class="block" aria-labelledby="reviews-title">
     <h2 class="section__title section__title--small" id="reviews-title">Latest reviews</h2>
     {% if reviews %}
